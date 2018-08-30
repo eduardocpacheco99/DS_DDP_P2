@@ -1,0 +1,28 @@
+---
+title: "Submission to data products project"
+author: "Eduardo Pacheco"
+date: "29 de agosto de 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. 
+
+
+
+```{r pressure}
+
+url = "https://minimaxir.com/csv/buzzfeed_linkbait_headlines.csv"
+#download.file(url, destfile = "./data.csv")
+df <- read.csv("./data.csv", header=T)
+
+
+
+plot(df$num_fb_shares,df$listicle_size)
+```
+
